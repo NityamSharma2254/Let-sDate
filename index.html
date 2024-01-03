@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div class ="heading" >
+                <h1 class = "header_text">let's Go out Together?</h1>
+            </div>
+            <div class="gif_container">
+                <img src= https://media.giphy.com/media/QBd2kLB5qDmysEXre9/giphy.gif alt="Mr. Bean">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">HAN</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">NAHI</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
